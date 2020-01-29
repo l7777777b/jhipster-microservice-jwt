@@ -1,0 +1,32 @@
+entity Driver
+entity Car
+
+relationship ManyToMany {
+  Car{driver} to Driver{car}
+}
+
+entity RankProperties {
+    rank Integer required,
+    minExp Integer required,
+    maxExp Integer required,
+    maxStamina Integer required,
+    maxAlly Integer required,
+    maxTeam Integer required    
+}
+enum TaskMode {
+    NO_CONTINUE_STAGE_COUNT,
+    STAGE_COUNT,
+    STAGE_ID
+}
+
+entity User {
+    taskMode TaskMode required,
+    value Integer   required
+}
+
+relationship ManyToOne {
+  User{referral} to User
+}
+
+dto all with mapstruct
+service all with serviceClass
