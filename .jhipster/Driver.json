@@ -1,0 +1,25 @@
+{
+    "name": "Driver",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "car",
+            "otherEntityRelationshipName": "driver",
+            "relationshipName": "car",
+            "otherEntityField": "id",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20200129092035",
+    "entityTableName": "driver",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "jhipsterMicroserviceJWT",
+    "applications": "*",
+    "microserviceName": "jhipsterMicroserviceJWT"
+}
